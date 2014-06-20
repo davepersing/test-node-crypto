@@ -1,0 +1,16 @@
+{
+  "name": "crypto-node",
+  "version": "0.0.1",
+  "description": "test app for hmac sha-1 signed requests and api posts.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+  	"express": "3.x",
+  	"ref": "", 
+  	"buffer": ""
+  },
+  "author": "David Persing",
+  "license": "MIT"
+}
