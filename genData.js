@@ -1,7 +1,6 @@
 var crypto = require('crypto');
 var ref = require('ref');
 var fs = require('fs');
-var buffer = require('buffer');
 
 /*
 playerId: 12345
@@ -20,7 +19,7 @@ function generateData(playerId, bundleId, timestamp, salt) {
 	console.log('salt: %s', salt);
 
 	fs.readFile('./private_key.pem', function (err, data) {
-		hmac = crypto.createHmac('sha1', data);
+		hmac = crypto.createHmac('sha1WithRSAEncryption', data);
 
 		hmac.setEncoding('base64');
 
@@ -33,6 +32,7 @@ function generateData(playerId, bundleId, timestamp, salt) {
 											buf, 
 											new Buffer(salt, 'base64')
 											]);
+		console.log(payloadBuf.length.toString());
 
 		hmac.write(payloadBuf);
 		hmac.end();

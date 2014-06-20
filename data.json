@@ -1,0 +1,7 @@
+{
+	"playerId": "12345",
+	"bundleId": "com.company.game",
+	"timestamp": "1403290841071",
+	"salt": "this is my salt",
+	"signature": "LAXpVNSy0CFZZkq/P7RRCZe5adQ="
+}
